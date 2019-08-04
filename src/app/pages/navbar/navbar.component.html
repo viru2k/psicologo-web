@@ -1,0 +1,57 @@
+
+<nav id="top" class=" container-fluid  navbar navbar-expand-lg sticky-top animated fadeIn slow ">
+  <button class="navbar-toggler navbar-light bg-light" type="button"
+          (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+
+  <div class=" navbar-collapse collapse animated fadeIn slow"
+       [ngClass]="{ 'show': navbarOpen }"
+       >
+        <div class="row ">
+         <div class="   col-12 justify-content-start">
+            <ul class="navbar-nav mr-auto d-flex " >
+              <li routerLinkActive="active" class="nav-item hvr-shrink nav-item nav-toggler btn-menu-cuatro  pr-2" >
+                 <a class="pl-4 menu-font nav-link text-white" routerLink="inicio"  (click)="toggleNavbar()"><i class="fas fa-home icon-home pr-2"></i>Inicio</a>
+              </li>
+              <li class="hvr-shrink  nav-item btn-menu-dos pt-1 pl-2 pr-2" >
+                <a class="menu-font  nav-link text-white " routerLink="institucional" data-toggle="collapse"   (click)="toggleNavbar()">Institucional</a>
+                </li>         
+           
+              <li routerLinkActive="active" class="nav-item hvr-shrink  nav-item btn-menu-tres pt-1 pl-2 pr-2" >
+                <a class="menu-font  nav-link text-white " routerLink="profesionales/buscar"   (click)="toggleNavbar()">Busca un profesional</a>
+            </li>          
+           
+            <li routerLinkActive="active" class="nav-item hvr-shrink  nav-item btn-menu-uno pt-1 pl-2 pr-2" >
+             <a class="menu-font  nav-link text-white " routerLink="contacto"   (click)="toggleNavbar()">Contactanos</a>
+             </li>
+                
+             <li  routerLinkActive="active" class=" nav-item hvr-shrink  nav-item btn-menu-cinco pt-1 pl-2 pr-2" >
+                <a class="menu-font  nav-link text-white " routerLink="psicologo/login"   (click)="toggleNavbar()">Soy psicólogo<i class="fas fa-user-graduate fa-lg pl-2"></i></a>
+            </li>  
+          </ul>   
+         
+         </div>
+        
+      </div>
+    
+    
+     
+  </div>
+  
+</nav>
+
+<!-- 
+<li class="hvr-pulse  nav-item" >
+    <a class="menu-font  nav-link text-secondary" routerLink="cursos">Cursos</a>
+  <li class="hvr-pulse  nav-item" >
+                  <a class="menu-font  nav-link text-secondary" routerLink="secretaria">Secretarias</a>
+              </li>
+   <li class="hvr-pulse  nav-item" >
+                <a class="menu-font  nav-link text-secondary" routerLink="profesionales">Profesionales</a>
+            </li> 
+</li> -->
+

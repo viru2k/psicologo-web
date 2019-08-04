@@ -1,0 +1,65 @@
+
+  <div class="container-fluid">
+      <router-outlet class="fondo" name="prof"></router-outlet>
+  </div>
+
+ 
+
+ <br>
+<div >
+    <app-loading *ngIf="loading"> </app-loading> 
+   
+</div>
+<div class="  pt-5 p-4">
+<div class="flexbox p-2 box">
+    <div class="flex-menubar-columnas">
+      
+        <div class="flex-sidebar-columnas">
+                <label class="pl-6 pr-4">Buscar </label>
+                <mat-form-field class="pl-6 pr-4">
+                        <mat-label></mat-label>
+                        <mat-select [(ngModel)]="element" name="elementos">
+                          <mat-option *ngFor="let elem of elementos" [value]="elem.os_nombre">
+                            {{elem.os_nombre}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                  <!--     <p> Selected food: {{element}} </p> -->
+                    
+                   
+                   
+              <button   class="btn btn-outline-info" type="submit" (click)="buscar()" >Buscar</button>
+        </div>
+    </div>        
+   
+    
+
+</div>
+<div>
+    
+
+</div>
+</div>
+
+<div class="  pt-5 p-4">
+        <div class="flexbox p-2 box ">
+           
+                  <!--   <mat-form-field>
+                            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar...">
+                          </mat-form-field>
+                           -->
+<table mat-table #table [dataSource]="elementosPadron"  multiTemplateDataRows  class="mat-elevation-z8 col-12 menu-font ">
+        <ng-container matColumnDef="{{column.id}}" *ngFor="let column of columnNames">
+          <mat-header-cell *matHeaderCellDef > {{column.value}} </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element[column.id]}} </mat-cell>
+        </ng-container>
+    
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> 
+      </table>
+            </div>
+        
+        </div>              
+
+
+     

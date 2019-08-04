@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://c1351312.ferozo.com/api-psicologo/public/api/",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

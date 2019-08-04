@@ -1,0 +1,146 @@
+
+<nav id="top-submenu" class="mt-1 container-fluid  navbar navbar-expand-lg sticky-top animated fadeIn slow ">
+  <button class="navbar-toggler navbar-light bg-light" type="button"
+          (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+
+  <div class=" navbar-collapse collapse animated fadeIn slow"
+       [ngClass]="{ 'show': navbarOpen }"
+       >
+        <div class="row ">
+         <div class="   col-12 justify-content-start">
+            <ul class="navbar-nav mr-auto d-flex " >
+                <li routerLinkActive="active" class="nav-item hvr-shrink nav-item nav-toggler btn-menu-cinco-submenu  pt-1 pl-2 pr-2" >
+                    <a class="pl-4 menu-font nav-link text-white" routerLink="/psicologo/principal"  (click)="toggleNavbar()">Inicio</a>
+                 </li>
+              <li routerLinkActive="active" class="nav-item hvr-shrink nav-item nav-toggler btn-menu-uno-submenu  pt-1 pl-2 pr-2" >
+                 <a class="pl-4 menu-font nav-link text-white" routerLink="/psicologo/liquidacion"  (click)="toggleNavbar()">Mis liquidaciones</a>
+              </li>
+              <li class="hvr-shrink  nav-item btn-menu-dos pt-1 pl-2 pr-2" >
+                <a class="menu-font  nav-link text-white " routerLink="/psicologo/noticias" data-toggle="collapse"   (click)="toggleNavbar()">Noticias</a>
+                </li>         
+           
+              <li routerLinkActive="active" class="nav-item hvr-shrink  nav-item btn-menu-cinco-submenu pt-1 pl-2 pr-2" >
+                <a class="menu-font  nav-link text-white " routerLink="/psicologo/cursos"   (click)="toggleNavbar()">Cursos</a>
+            </li>          
+           
+          
+                
+            
+          </ul>   
+         
+         </div>
+        
+      </div>
+    
+    
+     
+  </div>
+  
+</nav>
+
+<div class="row mt-3 ml-3 mr-3 ">
+  <h4 class="text-center colorgris animated fadeIn slow">PANEL DE NOVEDADES</h4>
+  </div>
+  <hr>
+  
+  <div class="  pt-5 p-4">
+    <div class="flexbox p-2 box">   
+      <h6 class="text-left h4-color-gris"><small class="color-danger ">informa - </small><small>03/07/2019</small></h6> 
+      <hr> 
+    <h6 class="text-center h4-color-gris">  <a  href="../../../../assets/pdf/REGLAMENTO INTERNO 2008-1.pdf" target="_blank">REGLAMENTO INTERNO</a>  </h6>    
+  </div>
+
+      <div class="flexbox p-2 box">   
+          <h6 class="text-left h4-color-gris"><small class="color-danger ">informa - </small><small>03/07/2019</small></h6> 
+          <hr> 
+        <h6 class="text-center h4-color-gris">Ya se encuentra disponible el nuevo cuadro de convenios Julio 2019 <a  href="../../../../assets/pdf/ARANCELES_JULIO_2019.pdf" target="_blank">obra sociales</a>  </h6>    
+      </div>
+
+
+  <div class="flexbox p-2 box"> 
+
+    <h6 class="text-left h4-color-gris"><small class="color-danger ">actualizado - </small><small>03/07/2019</small></h6> 
+
+    <p style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">COLEGIO DE PSIC&Oacute;LOGOS DE SAN JUAN</span></strong></p>
+    <p>&nbsp;</p>
+    <p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: right;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">San Juan 3 de Julio de 2019</span></strong></p>
+    <p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ESTIMADOS MATRICULADOS:</span></strong></p>
+    <p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;Se informa que desde el 15 y hasta el 19 de julio inclusive, el colegio permanecer&aacute; cerrado sin atenci&oacute;n al p&uacute;blico por refacciones y reacondicionamiento del edificio.</span></p>
+    <p>&nbsp;</p>
+    <p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Lic. Bibiana Noe&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lic. Gema Galv&aacute;n</span></strong></p>
+    <p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Vicepresidente&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Presidente</span></strong></p>
+
+
+
+  </div>
+
+
+  <div class="flexbox p-2 box"> 
+
+    <h6 class="text-left h4-color-gris"><small class="color-danger ">actualizado - </small><small>03/07/2019</small></h6> 
+
+  <p style="line-height: 2.4; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">COLEGIO DE PSIC&Oacute;LOGOS DE SAN JUAN</span></strong></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: right;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">San Juan 3 de Julio de 2019</span></strong></p>
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Prestadores de Obra Social Colmed:</span></strong></p>
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;Se informan los aranceles vigentes a partir del presente mes:</span></p>
+<p>&nbsp;</p>
+<table style="border: none; border-collapse: collapse;">
+<tbody>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Prestaci&oacute;n</span></strong></p>
+</td>
+<td style="vertical-align: top; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Valor anterior</span></strong></p>
+</td>
+<td style="vertical-align: top; background-color: #ffff00; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: #ffff00; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Valor vigente</span></strong></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Individual</span></strong></p>
+</td>
+<td style="vertical-align: top; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">364</span></strong></p>
+</td>
+<td style="vertical-align: top; background-color: #ffff00; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: #ffff00; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">418.60</span></strong></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Fliar/ pareja</span></strong></p>
+</td>
+<td style="vertical-align: top; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">450</span></strong></p>
+</td>
+<td style="vertical-align: top; background-color: #ffff00; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: #ffff00; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">517.50</span></strong></p>
+</td>
+</tr>
+<tr style="height: 0pt;">
+<td style="vertical-align: top; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Grupal</span></strong></p>
+</td>
+<td style="vertical-align: top; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">227</span></strong></p>
+</td>
+<td style="vertical-align: top; background-color: #ffff00; padding: 0pt 5.4pt 0pt 5.4pt; border: solid #000000 0.5pt;">
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><strong><span style="font-size: 12pt; font-family: 'Bookman Old Style',serif; color: #000000; background-color: #ffff00; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">261.05</span></strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Lic. Bibiana Noe&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lic. Gema Galv&aacute;n</span></p>
+<p style="line-height: 1.7999999999999998; margin-top: 0pt; margin-bottom: 0pt; text-align: center;"><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Vicepresidente&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Presidente</span></p>
+
+</div>
+</div>
