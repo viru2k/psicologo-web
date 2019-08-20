@@ -2,11 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import swal from 'sweetalert2';
 import { PsicologoService } from '../../../services/psicologo.service';
 import { UsuarioModulo } from './../../../../../../vision-frontend/src/app/models/user-modulo.model';
+import { DialogService, MessageService } from 'primeng/api';
+import { DatePipe, formatDate } from '@angular/common';
+import { PopupLiquidacionDetalleComponent } from './../../../shared/components/popup/popup-liquidacion-detalle/popup-liquidacion-detalle.component';
+import * as jsPDF from 'jspdf';
+
 
 @Component({
   selector: 'app-liquidacion',
   templateUrl: './liquidacion.component.html',
-  styleUrls: ['./liquidacion.component.css']
+  styleUrls: ['./liquidacion.component.css'],
+  providers: [MessageService,DialogService]
+  
 })
 export class LiquidacionComponent implements OnInit {
 
@@ -14,12 +21,13 @@ export class LiquidacionComponent implements OnInit {
   loading: boolean;
   elementos: any[] = [];
   matricula:string;
+  psicologo:string;
 
-  constructor(private miServico: PsicologoService) { 
+  constructor(private miServico: PsicologoService, private messageService: MessageService ,public dialogService: DialogService) { 
 
     this.cols = [
               
-      { field: 'id_liquidacion', header: 'Nº' , width: '6%'} ,
+      { field: 'id_liquidacion', header: 'Liq. nº' , width: '6%'} ,
       { field: 'num_comprobante', header: 'Comprobante' , width: '8%'},
       { field: 'os_liq_bruto', header: 'Bruto' , width: '8%'},
       { field: 'os_desc_fondo_sol', header: 'F. sol',  width: '8%' },
@@ -30,13 +38,17 @@ export class LiquidacionComponent implements OnInit {
       { field: 'os_ing_brutos', header: 'Ing. brutos' , width: '8%'},
       { field: 'os_lote_hogar', header: 'Lote h.' , width: '8%'},
       { field: 'os_liq_neto', header: 'A cobrar' , width: '8%'},
-      
+      {field: 'boton', header: '', width: '8%' },
+      {field: 'boton', header: '' , width: '8%'},
    ];
 
   }
 
   ngOnInit() {
+    
      let usu = JSON.parse(localStorage.getItem('userData'));
+     console.log(usu);
+     this.psicologo =usu['nombreyapellido'];
      this.matricula = usu['username'];
     this.loadList();
   }
@@ -75,6 +87,80 @@ export class LiquidacionComponent implements OnInit {
     } catch (error) {
     this.throwAlert('error','Error al cargar los registros',error,error.status);
     }  
+}
+
+
+
+
+ verDetalle(event:any){
+  console.log(event);
+  let data:any; 
+  data = event;
+  const ref = this.dialogService.open(PopupLiquidacionDetalleComponent, {
+  data,
+   header: 'Detalle de liquidacion', 
+   width: '98%',
+   height: '75%'
+  
+  });
+
+  ref.onClose.subscribe((PopupLiquidacionDetalleComponent:any) => {
+      if (PopupLiquidacionDetalleComponent) {
+    
+      }
+  });
+ 
+}
+
+ 
+
+
+
+ generarPdfRentas(event:any) {
+  console.log(event);
+  let _fechaEmision = formatDate(event.os_fecha, 'dd/MM/yyyy', 'en');
+
+  let userData = JSON.parse(localStorage.getItem('userData'));
+
+  
+  
+
+  var doc = new jsPDF();  
+  /** valores de la pagina**/
+  const pageSize = doc.internal.pageSize;
+  const pageWidth = pageSize.width ? pageSize.width : pageSize.getWidth();
+  doc.setFontSize(9);
+  doc.text('DIRECCION GENERAL  DE RENTAS', 10, 15 );
+  doc.text('CERTIFICADO DE RETENCION Nº ' + event.os_num_ing_bruto, pageWidth - 80, 15 );
+  doc.text('SAN JUAN', 10, 20);
+  doc.text('FECHA: ' + _fechaEmision, pageWidth - 80, 20 );
+  doc.line(10, 25, pageWidth - 10, 25);
+  doc.setFontSize(8);
+  doc.text('Impuestos sobre los ingresos brutos', 10, 30 );
+  doc.text('COLEGIO DE PSICOLOGOS DE SAN JUAN', 10, 35 );
+  doc.text('GRAL. ACHA 1056 SUR', 10, 40 );
+
+  doc.text('AGENTE DE RETENCION 000-39646-7 77', pageWidth - 80, 30 );
+  doc.text('C.U.I.T 30-63561825-2', pageWidth - 80, 35 );
+  doc.line(10, 43, pageWidth - 10, 43);
+  doc.text('VENDEDOR (Apellido y Nombre)', 10, 50 );
+  doc.text(event.mat_apellido, 10, 55 );
+
+  doc.text('ACTIVIDAD: Psicologia', pageWidth - 80, 50 );
+  doc.text('C.U.I.T: '+event.mat_cuit, pageWidth - 80, 55 );
+  doc.text('Nº ing. brutos: '+event.mat_ning_bto, pageWidth - 80, 60 );
+  doc.text('Domicilio: '+event.mat_domicilio_partcular, pageWidth - 80, 65 );
+
+  doc.line(10, 70, pageWidth - 10, 70);
+  let imp_retenido = Number(event.os_ing_brutos)+Number(event.os_lote_hogar);
+  doc.text('Monto imponible: '+event.os_liq_bruto, 10, 75 );
+  doc.text('Ing. brutos: '+event.os_ing_brutos, 60, 75 );
+  doc.text('Lote hogar: '+event.os_lote_hogar, 90, 75 );
+  doc.text('Importe retenido: '+imp_retenido, 130, 75 );
+  doc.line(10, 80, pageWidth - 10, 80);
+  doc.text('DUPLICADO', pageWidth/2, 85, null, null, 'center');
+ window.open(doc.output('bloburl'));  
+  
 }
 
 

@@ -108,6 +108,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import {DropdownModule} from 'primeng/dropdown';
 
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import { PopupLiquidacionDetalleComponent } from './shared/components/popup/popup-liquidacion-detalle/popup-liquidacion-detalle.component';
 
 
  
@@ -137,7 +138,14 @@ InstitucionalComponent,
 SecretariaComponent,
 ProfesionalesComponent,
 LoadingComponent, 
-    LoadingComponent, LoginComponent, LiquidacionComponent, PrincipalComponent, NovedadesComponent, CursosPsicologoComponent, NoticiasComponent
+    LoadingComponent, 
+    LoginComponent,
+     LiquidacionComponent, 
+     PrincipalComponent,
+      NovedadesComponent, 
+      CursosPsicologoComponent,
+       NoticiasComponent,
+        PopupLiquidacionDetalleComponent
 
 
     
@@ -193,7 +201,7 @@ LoadingComponent,
       NgxPopper
   ],
   entryComponents: [
-    
+    PopupLiquidacionDetalleComponent
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es-Ar' },{
     provide: HTTP_INTERCEPTORS,
